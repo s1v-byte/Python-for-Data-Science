@@ -38,4 +38,25 @@ Artist = "Michael Jackson"
 print(Artist.replace("Michael", "Miku")) #Replace Michael with Miku
 #Output = Miku Jackson
 
+#-----------------------TUPPLES-----------------------
+#Tupples
+Tuple1 = ("disco", 1, 2.3) #any types that inside the parenthesis () can exist
+print(Tuple1[0], Tuple1[-1])
+#Output = disco 2.3
 
+#Combining Tupples
+Tuple1 = ("disco", 1, 23)
+Tuple2 = Tuple1 + ("bar", 2, 24)
+print(Tuple2)
+#Output "disco", 1, 23, "bar", 2, 24
+
+#SLICING TUPPLES
+Tuple1 = ("disco", 1, "bar", .2, 4)
+Tuple2 = Tuple1[0:4]
+Tuple3 = Tuple1[2:5]
+print(Tuple2, Tuple3, "Length: ",len(Tuple1))
+#Output = ("disco", 1, "bar", .2) ("bar", .2, 4) "Length: 4"
+
+#https://apps.cognitiveclass.ai/learning/course/course-v1:CognitiveClass+PY0101EN+v3/block-v1:CognitiveClass+PY0101EN+v3+type@sequential+block@2d204ac4fa3143048a998da7e53702d7/block-v1:CognitiveClass+PY0101EN+v3+type@vertical+block@bc103d3618c54b20891e959ff7e8842b
+Ratings = (10,"9", 6)
+print(Ratings.replace("9", "Re"))
