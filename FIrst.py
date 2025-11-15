@@ -33,15 +33,20 @@ Artist = "Michael Jackson"
 print("Length:",Artist,len(Artist)) #len determines the length of the character
 #Output = 15
 
+#Len Determining how many elements, not index by using length
+Names = "Michael Jackson", "dave"
+Totalnames = (Names)
+print ("len used for determining elemends and not index:", len(Totalnames))
+
 #Strings: IMMUTABLE
 Artist = "Michael Jackson"
-print(Artist.replace("Michael", "Miku")) #Replace Michael with Miku
+print("\n","\n",Artist.replace("Michael", "Miku")) #Replace Michael with Miku
 #Output = Miku Jackson
 
 #-----------------------TUPPLES-----------------------
 #Tupples
 Tuple1 = ("disco", 1, 2.3) #any types that inside the parenthesis () can exist
-print(Tuple1[0], Tuple1[-1])
+print("\n",Tuple1[0], Tuple1[-1])
 #Output = disco 2.3
 
 #Combining Tupples
@@ -54,9 +59,12 @@ print(Tuple2)
 Tuple1 = ("disco", 1, "bar", .2, 4)
 Tuple2 = Tuple1[0:4]
 Tuple3 = Tuple1[2:5]
-print(Tuple2, Tuple3, "Length: ",len(Tuple1))
+print("\n",Tuple2, Tuple3, "Length: ",len(Tuple1))
 #Output = ("disco", 1, "bar", .2) ("bar", .2, 4) "Length: 4"
 
-#https://apps.cognitiveclass.ai/learning/course/course-v1:CognitiveClass+PY0101EN+v3/block-v1:CognitiveClass+PY0101EN+v3+type@sequential+block@2d204ac4fa3143048a998da7e53702d7/block-v1:CognitiveClass+PY0101EN+v3+type@vertical+block@bc103d3618c54b20891e959ff7e8842b
-Ratings = (10,"9", 6)
-print(Ratings.replace("9", "Re"))
+#Tupples add tupples
+omg = ("dave", 1, "john",2,3,4,5,6) #len value = 8
+wa = "sads"
+sad =  omg + (wa,)
+print(sad, len(sad))
+#Output = (("dave", 1, "john",2,3,4,5,6, "sads") 9
