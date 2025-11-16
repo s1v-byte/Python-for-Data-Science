@@ -82,8 +82,8 @@ print(tuples1[3])
 
 #Tupples Lists Extend
 tuples1 = [1,2,3,["four", "five"],["six", "seven"],[4,5]]
-tuples1.extend(["HELLO"])
-print(tuples1[6][:3])
+tuples1.extend(["HELLO", "WORLDS"])
+print(tuples1)
 #Output = HEL
 
 #Tupples List muttable (change)
@@ -104,3 +104,62 @@ tuples2 = tuples1.split(",")
 tuples3 = tuples2 + [3]
 print(tuples3)
 #Output = ['a', 'b', 'c', 'd', 3]
+
+#LIST THAT CLONES using SLICING :
+list1 = ["john", "dave", "123", "john"]
+list2 = list1[:]  # Slicing creates a copy of the list
+print("Original List:", list1)
+print("Cloned List:", list2)
+#Output = Original List: ["john", "dave", "123", "john"]
+#output = Clones List: ["john", "dave", "123", "john"]
+
+
+                #SETS
+#Sets DO NOT convert DUPLICATES
+sets1 = {"john", "doe", "123", "john"}
+print(sets1)
+#Output = {"john", "doe", "123",}
+
+#Converting LISTS to SETS
+list1 = ["john", "doe", "123", "john"]
+set1 = set(list1)
+print(set1)
+#Output {'123', 'doe', 'john'}
+
+#ADDING aka extend and Removing SETS
+list1 = ["john", "doe", "123", "john"]
+list1.extend (["Jane", "s"])
+set1 = set(list1)
+print(set1)
+#Output = {"123", "dave", "Jane", "john", "s"}
+list1.remove("Jane")
+print(list1)
+#Output = ["john", "dave", "123", "john", "s"]
+
+#CHECKING if the data is in set
+list1 = {"john", "dave", "123", "john"}
+print("Jane" in list1)
+#Output = False
+print("john" in list1)
+#Output = True
+
+#CHECKING what similarities from both the data 
+sets1 = {"john", "dave", "123", "john"}
+sets2 = {"john", "doe", "123", "1"}
+sets3 = sets1 & sets2
+print(sets3)
+#Output = {"john", "123"}
+
+#UNION - combining all the data into 1 and removing the duplicates
+sets1 = {"john", "dave", "123", "john"}
+sets2 = {"john", "doe", "123", "1"}
+sets3 = sets1.union(sets2)
+print(sets3)
+#Output = ["john", "dave", "123", "john"]
+
+#issubset - CHECKING TO SEE data is in the encapsulated group
+sets1 = {"john", "dave", "123", "john"}
+sets2 = { "123", "john"}
+sets3 = sets2.issubset(sets1)
+print(sets3)
+#Output = True
