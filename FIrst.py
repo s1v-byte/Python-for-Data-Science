@@ -163,3 +163,44 @@ sets2 = { "123", "john"}
 sets3 = sets2.issubset(sets1)
 print(sets3)
 #Output = True
+
+                #DICTIONARIES
+#Concept
+D={'a':0,'b':1,'c':2}
+D.values()
+#Output - dict_values([0, 1, 2])
+
+#ADDING VALUE
+D = {'a': 0, 'b': 1, 'c': 2}
+# Adding a new key-value pair
+D['d'] = 3
+print(D)
+#Output = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
+
+#DELETING VALUE
+D = {'a': 0, 'b': 1, 'c': 2}
+# Adding a new key-value pair
+del(D["a"])
+print(D)
+#Output = {'b': 1, 'c': 2}
+
+#CHECKING THE VALUE USING IN
+D = {'a': 0, 'b': 1, 'c': 2}
+# Adding a new key-value pair
+del(D["a"])
+print("a" in D)
+#Output = False
+
+#SEE ALL THE KEYS IN DICTIONARY USING KEYS
+D = {'a': 0, 'b': 1, 'c': 2}
+# Get all keys
+keys = D.keys()
+print(keys)
+#Output = dict_keys(['a', 'b', 'c'])
+
+#SEE ALL VALUES IN KEYS
+D = {'a': 0, 'b': 1, 'c': 2}
+# Get all keys
+keys = D.values()
+print(keys)
+#Outut = dict_values([0, 1, 2])
