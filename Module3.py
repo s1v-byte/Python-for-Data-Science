@@ -46,3 +46,24 @@ else:
 #LEARNINGS:
 #elif - else if shortcut and usually placed under the first if
 #LOGICAL OPERATORS = and , or , not (!)
+
+#-----------------------LOOPS-------------------------
+#FOR LOOPS = repeat something a certain number of times
+A=[3,4,5]
+for i in A:
+     print(i)
+#OUTPUT = 3
+#       = 4
+#       = 5
+
+#WHILE LOOPS = conditional
+x=11
+y=1
+while(y != x): # <---- print Y if Y is not == x (11) stop till reach 11
+    print(y) #PRINT Y
+    y=y+1 #Y + 1
+#Output = 1
+#       = 2
+# "" "" "" 
+#       = 10  <---- HANGGANG 10 LANG UNG PRINT NYA SINCE 11=11
+
