@@ -165,10 +165,20 @@ print(sets3)
 #Output = True
 
                 #DICTIONARIES
-#Concept
+#Values
 D={'a':0,'b':1,'c':2}
-D.values()
+print(D.values())
 #Output - dict_values([0, 1, 2])
+
+#Keys
+D={'a':0,'b':1,'c':2}
+print(D.keys())
+#Output - dict_values(["a", "b", "c"])
+
+#PRINTING specific value
+album_sales_dict = {"The Bodyguard":50, "Back in Black":50, "Thriller":65}
+print(album_sales_dict["Back in Black"])
+#Output = 50
 
 #ADDING VALUE
 D = {'a': 0, 'b': 1, 'c': 2}
@@ -181,8 +191,9 @@ print(D)
 D = {'a': 0, 'b': 1, 'c': 2}
 # Adding a new key-value pair
 del(D["a"])
+del(D["b"])
 print(D)
-#Output = {'b': 1, 'c': 2}
+#Output = {'c': 2}
 
 #CHECKING THE VALUE USING IN
 D = {'a': 0, 'b': 1, 'c': 2}
