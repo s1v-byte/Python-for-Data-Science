@@ -42,3 +42,7 @@ if (year > 1979) and (year <1990):
 else:
     print("this year is either less than 1979 or greater than 1990")
 #OUTPUT = this year was made in the 80s
+
+#LEARNINGS:
+#elif - else if shortcut and usually placed under the first if
+#LOGICAL OPERATORS = and , or , not (!)
