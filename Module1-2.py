@@ -43,6 +43,11 @@ Artist = "Michael Jackson"
 print("\n","\n",Artist.replace("Michael", "Miku")) #Replace Michael with Miku
 #Output = Miku Jackson
 
+
+
+
+
+#-----------------------MODULE 2----------------------
 #-----------------------TUPPLES-----------------------
 #Tupples
 Tuple1 = ("disco", 1, 2.3) #any types that inside the parenthesis () can exist
