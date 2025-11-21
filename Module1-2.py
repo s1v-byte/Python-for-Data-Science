@@ -220,3 +220,33 @@ D = {'a': 0, 'b': 1, 'c': 2}
 keys = D.values()
 print(keys)
 #Outut = dict_values([0, 1, 2])
+
+
+#QUICK REVIEW
+#TUPLES ARE IMMUTABLE
+tuples2 = ("hello", 1)
+tuples1 = tuples2 + (4,)
+#no remove since immutable
+#no rename since immutable 
+
+#LISTS ARE MUTABLE
+list1 = ["hello", "a"]
+list1.extend(["?", "as"])
+list1.remove("a")
+list1[0] = "hi"
+
+#SET
+set1 = {"hello", "asdf", "world"}
+set1.update([1])
+set1.remove("asdf")
+#rename
+set1.remove("world")
+set1.add("mars")
+
+#DICTIONARIES
+dict1 = {"hello":1, "asdf":2, "hellow":3}
+dict1.update({"as":1})#Adds a new key
+dict1.pop("asdf")
+dict1["world"]= 1.1
+    
+print(dict1)
