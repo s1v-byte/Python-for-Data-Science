@@ -80,6 +80,8 @@ tuples2 = tuples1[3][2]
 print(tuples2,"length:",len(tuples2))#Select from index 3 and collect value 2(seven) slice by 2
 #Output 5
 
+#------------------------------LISTS-------------------------
+
 #Tupples LISTS
 tuples1 = [1,2,3,["four", "five"],["six", "seven"],[4,5]]
 print(tuples1[3])
