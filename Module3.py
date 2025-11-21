@@ -182,3 +182,89 @@ while password != "secret":
 
 print("Access granted!")
 #Output: Enter Password: 
+
+#------------------------- FUNCTIONS--------------------------
+#len is a function 
+#similar to len, sum is a function because it adds the values
+#same as sorted are sort
+"""
+code above are sum() sorted() but .sort()
+"""
+#Basic Function
+def add1(a): #<--- add1 is a variable name, more like function name, def means define
+    b=a+1    #<--- formula for add1, so pag tinawag add1, that indentation will form no matter what
+    return b #<--- anything that is inside the indent is a formula for the variable
+c = add1(10) #<--- OUTSIDE the indentation, defines the VALUE of add1, which is (10)
+print(c) #OUTPUT: 11     #Since b=10+1
+
+#Basic function - Multiply
+def Mult(a,b):
+    c=a*b
+    return c
+d = Mult(2,2.4) #<---- Pwede int and float at the same time
+print(d)
+#Output: 4.8
+
+#Basic function - Int + string
+def Mult(a,b):
+    c=a*b
+    return c
+d = Mult(2,"hehe-") #<---- 2*"hehe-" = hehe-hehe-
+print(d)
+#Output: hehe-hehe
+
+#Basic function - String only and no RETURN cuz string no need
+def MJ():
+    print("MICHAEL JACKSON")
+    #no RETURN but it outputs: None
+mjay = MJ()
+print(mjay)
+#output: MICHAEL JACKSON None
+
+#A "STATIC" FUNCTION because this function does nothing
+def MJ():
+    pass
+    return None
+    #pass and return None are same method (to let the function do nothing)
+s = MJ()
+print(s)
+
+#Multiple tasks Function:
+def add1(a):
+    b=a+1
+    print(a,"plus 1 equals",b)
+    return b
+sum1 = add1(2)
+print(sum1)
+#Output: 2 plus 1 equals 3 3 <-- two 3 cuz i printed the sum1
+
+#USING LOOP IN FUNCTION
+def printStuff(Stuff):
+    for i, s in enumerate(Stuff):
+        print("Album", i, "Rating is ",s)
+album_ratings = ["HELLO", 12,2]
+printStuff(album_ratings)
+#output:
+"""
+Album 0 Rating is  HELLO
+Album 1 Rating is  12
+Album 2 Rating is  2
+"""
+
+#GLOBAL SCALE FUNCTION
+def AddDC(x): 
+    x=x+"DC" #<---- LOCAL SCOPE
+    print(x) #Prints the function <---- LOCAL SCOPE
+    return(x) #<--- LOCAL SCOPE
+x = "AC" #Define the X   <---- GLOBAL SCOPE
+z = AddDC(x) #Calls the FUNCTION <GLOBAL SCOPE
+#Output: ACDC
+
+#LOCAL Variable Scale
+def PinkFloyd(x):
+    global Claimsales
+    Claimsales = "45 Million"
+    return Claimsales
+PinkFloyd("required may value")
+print(Claimsales)
+#Output: 45 million
