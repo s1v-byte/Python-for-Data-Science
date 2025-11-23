@@ -268,3 +268,46 @@ def PinkFloyd(x):
 PinkFloyd("required may value")
 print(Claimsales)
 #Output: 45 million
+
+#Object and Classes
+
+class GPU: 
+    def __init__(self, model, fps):
+        self.model = model
+        self.fps = fps
+        
+    def frames(self):
+        print(f"My gpu is: {self.model} i have {self.fps}fps")
+        
+gpu1 = GPU("AMD", 60)
+gpu2 = GPU("NVIDIA", 120)
+
+gpu1.frames()
+gpu2.frames()
+#Output: My gpu is: AMD i have 60fps
+#        My gpu is: NVIDIA i have 120fps
+
+#With if else
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited {amount}. New balance: {self.balance}")
+    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew {amount} by {self.owner}. New balance: {self.balance}")
+        else:
+            print("Not enough money!")
+            
+acc1 = BankAccount("John", 1000)
+acc2 = BankAccount("Sarah", 500)
+
+acc1.deposit(200)   # John now has 1200
+acc2.withdraw(300)  # Sarah now has 200
+#Output: Deposited 200. New balance: 1200
+#        Not enough money!
