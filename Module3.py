@@ -269,23 +269,48 @@ PinkFloyd("required may value")
 print(Claimsales)
 #Output: 45 million
 
-#Object and Classes
+#---------------Object and Classes-------------
+#Basic Class And Object
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-class GPU: 
-    def __init__(self, model, fps):
-        self.model = model
-        self.fps = fps
-        
-    def frames(self):
-        print(f"My gpu is: {self.model} i have {self.fps}fps")
-        
-gpu1 = GPU("AMD", 60)
-gpu2 = GPU("NVIDIA", 120)
+# Create objects
+p1 = Person("Alice", 25)
+p2 = Person("Bob", 30)
 
-gpu1.frames()
-gpu2.frames()
-#Output: My gpu is: AMD i have 60fps
-#        My gpu is: NVIDIA i have 120fps
+print(p1.name, p1.age)
+print(p2.name, p2.age)
+
+#Class, object, METHODS
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    #Method
+    def bark(self):
+        print(f"{self.name} is barking!") #<--Method
+
+dog1 = Dog("Max", "Labrador")
+dog1.bark()
+
+#Class with Getters and Setters:
+class Car:
+    def __init__(self, brand, speed):
+        self.brand = brand
+        self.speed = speed
+
+    def get_speed(self):
+        return self.speed
+
+    def set_speed(self, new_speed):
+        self.speed = new_speed
+
+car = Car("Toyota", 120)
+print(car.get_speed())
+car.set_speed(150)
+print(car.get_speed())
 
 #With if else
 class BankAccount:
