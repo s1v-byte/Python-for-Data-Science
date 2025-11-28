@@ -336,3 +336,79 @@ acc1.deposit(200)   # John now has 1200
 acc2.withdraw(300)  # Sarah now has 200
 #Output: Deposited 200. New balance: 1200
 #        Not enough money!
+
+
+class Book:
+    
+    def __init__(self, title, author, year, available):
+        self.title = title
+        self.author = author
+        self.year = year
+        self.available = available
+        
+    def borrow(self):
+        if self.available:
+            self.available = False
+            print(f"\nYou borrowed: {self.title}")
+        else:
+            print(f"Sorry, {self.title} is not available.")
+        
+    def return_book(self):
+        self.available = True
+        print(f"\n  You returned: {self.title}")
+        
+class Library:
+    
+    # SHELVES
+    def __init__(self):
+        self.books = []
+    
+    def add_book(self, book):
+        self.books.append(book)
+    
+    def list_available_books(self):
+        print("\nAvailable books:")
+        for book in self.books:
+            if book.available:
+                print(f"- {book.title} ({book.year})")
+    
+    def borrow_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                book.borrow()
+                return
+        print("Book not found in library.")
+    
+    # NEW: return_book method
+    def return_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                book.return_book()  # Call the Book's method
+                return
+        print("Book not found in library.")
+
+
+# Create library and add books
+library = Library() 
+        
+# Create books
+Book1 = Book("The Hobbit", "Tolkien", 1937, True)
+Book2 = Book("Dune", "Frank Herbert", 1965, True)
+
+library.add_book(Book1)
+library.add_book(Book2)
+
+# List books
+library.list_available_books()
+
+# Borrow a book
+library.borrow_book("Dune") 
+
+# List again to confirm it was borrowed
+library.list_available_books()
+
+# Return a book
+library.return_book("Dune")
+
+# List again to confirm it is available
+library.list_available_books()
