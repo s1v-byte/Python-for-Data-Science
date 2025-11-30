@@ -16,11 +16,13 @@ this is line 1
 line 2 
 line 3
 """
-with open("testing.txt", "r") as File1:
-    
-    file_stuff = File1.readline(5)
-    type(file_stuff)
-   
+# Iterate through the lines
+
+with open("testing.txt","r") as file1:
+        i = 0;
+        for line in file1:
+            print("Iteration", str(i), ": ", line)
+            i = i + 1
 
 #Output:
 """

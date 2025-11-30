@@ -412,3 +412,26 @@ library.return_book("Dune")
 
 # List again to confirm it is available
 library.list_available_books()
+
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def display_info(self):
+        print(f"Name: {self.name}, Grade: {self.grade}")
+
+
+def print_all_students(student_list):
+    for student in student_list:
+        student.display_info()
+
+
+# --- Main Program ---
+s1 = Student("Alice", 85)
+s2 = Student("Bob", 92)
+s3 = Student("Charlie", 78)
+
+students = [s1, s2, s3]
+
+print_all_students(students)
