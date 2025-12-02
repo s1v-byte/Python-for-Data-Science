@@ -1,0 +1,6 @@
+Product, Quantity, Price
+Apple, 10, 0.50
+Banana, 5, 0.30
+Orange, 8, 0.60
+Apple 3, 0.50
+Grapes,4,1.20
