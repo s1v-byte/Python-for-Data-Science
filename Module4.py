@@ -19,6 +19,11 @@ with open ("testing.txt", "r")as read1:
 with open ("testing.txt", "r") as read1:
     print(read1.readlines()) #BUT TURNS ALL CONTENTS INTO LISTS FORMAT
 
+        #print specific index in the file that turned into list
+with open("testing.txt", "r") as file1:
+    lines = file1.readlines()  # Reads all lines into a list
+    print(lines[2], end='')  # Index 2 is "this is line 3"
+
     #Reading but INDEX specify and IT CONTINUES THE index count
 with open("testing.txt", "r") as read1: #This is line 1
     print(read1.readline(4)) #prints this
@@ -28,15 +33,6 @@ with open("testing.txt", "r") as read1: #This is line 1
 with open ("testing.txt","r") as readfile:
     for line in readfile:
         print(line)
-#--------------------------
-
-            #WRITING
-
-#Writing with multiple lines
-with open("testing2.txt", "w") as File2:
-    File2.write("This is line A")
-    File2.write("\n This is line B")
-    File2.write("\nThis is line 3")
 
 # Iterate through the lines using for loop
 with open("testing.txt","r") as file1:
@@ -57,9 +53,17 @@ Iteration 2 :  line 3
 
     #Iterate but in a clean way
 with open("testing.txt", "r") as file1:
-    for i, item in enumerate(file1):
-        print(f"Line {i}: {item}", end="")
+    for i, item in enumerate(file1, start=1):
+        print(f"Line {i}: {item}", end="")        
+#--------------------------
 
+            #WRITING
+
+#Writing with multiple lines
+with open("testing2.txt", "w") as File2:
+    File2.write("This is line A")
+    File2.write("\nThis is line B")
+    File2.write("\nThis is line 3")
 
 #Writing using LISTS and FOR LOOP
 Lines = ["This is 1\n", "This is 3\n", "This is 3\n"]
