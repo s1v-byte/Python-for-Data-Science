@@ -1,3 +1,4 @@
+"""
 #Reading csv files using panda
     #Basic Read CSV File
 import pandas 
@@ -43,18 +44,39 @@ df.insert(2, "Occupation", ["Chef", "Police", "Nurse"])
 print("With Excel File:\n",df)
 """
 
+        #SLICING ----> df.iloc
+#Excel Data Reference:    
+"""
 #SLICING DATA
-
-      Name  Age  Score
-0    Alice   23     88
-1      Bob   21     92
-2  Charlie   25     79
-"""    
+      Name  Age  Score  Gender     Job    Hair   Pet
+0    Alice   23     88  Female  Doctor  Blonde   Dog
+1      Bob   21     92    Male  Driver   Black   Cat
+2  Charlie   25     79    Male  Police   Black  Fish
+"""
+    #ROW SLICING - last index NOT included
 import pandas as pd
 xlsx_path = "File.xlsx" #XLSX file if may formula/code ung excel file
 df = pd.read_excel(xlsx_path) # Read the Excel file into a DataFrame
 # Rows 0 to 1
-df_slice = df.iloc[2:3] #2 represents the columns first, 3 is the rows
-print(df_slice,end="")
+df_slice = df.iloc[0:6] #2 represents the start of row slicing, 3 is the last NOT included
+print("\n--------------------------------")
+print("Row slices:")
+print(df_slice,"\n---------------------")
 #Output: 2  Charlie   25     79
+
+    #COLUMN SLICING - last index NOT included
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+df_slice = df.iloc[:, 1:2] #1 represents the start of columns slicing, 
+#2 is the last but NOT included
+print("\n Column slice:")
+print(df_slice,"\n---------------------")
+
+    #ROW + COLUMN SLICING - last index NOT included
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+df_slice = df.iloc[0:3, 3:7 ] #2:3 sliced rows of alice,bob. #2:3 slices the colummn Name and stops at Score(Not included)
+print("\n BOTH slice:")
+print(df_slice,"\n---------------------")
+
 
