@@ -53,6 +53,8 @@ print("With Excel File:\n",df)
 1      Bob   21     92    Male  Driver   Black   Cat
 2  Charlie   25     79    Male  Police   Black  Fish
 """
+
+"""
     #ROW SLICING - last index NOT included
 import pandas as pd
 xlsx_path = "File.xlsx" #XLSX file if may formula/code ung excel file
@@ -78,5 +80,65 @@ df = pd.read_excel(xlsx_path)
 df_slice = df.iloc[0:3, 3:7 ] #2:3 sliced rows of alice,bob. #2:3 slices the colummn Name and stops at Score(Not included)
 print("\n BOTH slice:")
 print(df_slice,"\n---------------------")
+
+
+        #SLICING (LABELS) -----> df.loc
+
+    #ROW + COLUMN - Label + Label   NO LOC
+import pandas as pd
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+df_slice = df[["Name","Pet","Job"] ]
+print("\n Label + Label:")
+print(df_slice,"\n---------------------") 
+
+
+    #ROW + COLUMN - Index + Label
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+
+df_slice = df.loc[:, ["Pet", "Job", "Name"]]
+print("\n Index + Label:")
+print(df_slice,"\n---------------------") 
+
+"""
+"""
+    #Try except no Column Found:
+try:
+    xlsx_path = "File.xlsx" 
+    df = pd.read_excel(xlsx_path)
+    df_slice = df.loc[0:3, ["Name","Job","Pet","Ages"]]
+    print("\n Index + Label:")
+    print(df_slice,"\n---------------------") 
+except KeyError as e:
+    print("No Column were found")
+    print("Details", e)
+
+    # Filter
+import pandas as pd
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+fil = df.filter(like="Score")      
+print("\n Index + Labelers:")
+print(fil,"\n---------------------") 
+    
+"""
+"""
+
+"""
+    #CHANGE COLUMN NAME BUT NOT SAVED IN EXCEL only in DataFrame
+import pandas as pd
+xlsx_path = "File.xlsx" 
+df = pd.read_excel(xlsx_path) 
+df.columns = ["ID", "Name", "Age", "Subject", "Grade", "Dave", "Dave "]
+df_slice = df[["Name","Dave","ID"] ]
+print("\n Label + Label:")
+print(df_slice,"\n---------------------") 
+
+    #CHANGE COLUMN NAME BUT SAVED IN EXCEL
+import pandas as pd
+df = pd.read_excel("Try.xlsx")
+df.columns = ["ID", "Name", "Age", "Subject", "Grade", "Dave", "ETS"]
+df.to_excel("Try.xlsx", index=False) #index = False prevents the code from creating unnecessary index
 
 
