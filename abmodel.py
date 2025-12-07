@@ -81,7 +81,6 @@ print(df_slice,"\n---------------------")
 
 
         #SLICING (LABELS) -----> df.loc
-
     #ROW + COLUMN - Label + Label   NO LOC
 import pandas as pd
 df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
@@ -92,34 +91,26 @@ print(df_slice,"\n---------------------")
 
     #ROW + COLUMN - Index + Label
 df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-
 df_slice = df.loc[:, ["Pet", "Job", "Name"]]
 print("\n Index + Label:")
 print(df_slice,"\n---------------------") 
 
 """
-"""
-    #Try except no Column Found:
-try:
-    df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-    df_slice = df.loc[0:3, ["Name","Job","Pet","Ages"]]
-    print("\n Index + Label:")
-    print(df_slice,"\n---------------------") 
-except KeyError as e:
-    print("No Column were found")
-    print("Details", e)
-
-    
-    
-
-    # Filter
+    #CONDITIONAL >
 import pandas as pd
 df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-fil = df.filter(like="Score")      
-print("\n Index + Labelers:")
-print(fil,"\n---------------------") 
-    
-"""
+df_slice = df[df["Age"] > 22]
+print(df_slice,"\n---------------------")
+
+    #CONDITIONAL == 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+df_slice = df.loc[df["Gender"] == "Male"]
+print(df_slice,"\n---------------------")
+
+        #CONDITIONAL == But print specifics only if MALE
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+df_slice = df.loc[df["Gender"] == "Male", ["Name", "Gender", "Job"]]
+print(df_slice,"\n---------------------")
 """
 
 """
@@ -132,25 +123,31 @@ df_slice = df[["Name","Dave","ID"] ]
 print("\n Label + Label:")
 print(df_slice,"\n---------------------") 
 
+"""
     #CHANGE COLUMN NAME BUT SAVED IN EXCEL
 import pandas as pd
 df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df.columns = ["ID", "Name", "Age", "Subject", "Grade", "Dave", "ETS"]
 df.to_excel("Try.xlsx", index=False) #index = False prevents the code from creating unnecessary index
-
-
-
-
+"""
 
 #OTHERS:
-    #For multiple sheets of excel file:
-        #df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 
-
-    #CONDITIONAL >
+    # Filter
 import pandas as pd
-xlsx_path = "File.xlsx" 
 df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-df_slice = df[df["Age"] > 22]
-print("\n Index + Label:")
-print(df_slice,"\n---------------------") 
+fil = df.filter(like="Score")      
+print("\n Index + Labelers:")
+print(fil,"\n---------------------") 
+
+    #Try except no Column Found:
+try:
+    df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+    df_slice = df.loc[0:3, ["Name","Job","Pet","Ages"]]
+    print("\n Index + Label:")
+    print(df_slice,"\n---------------------") 
+except KeyError as e:
+    print("No Column were found")
+    print("Details", e)
+
+

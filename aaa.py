@@ -1,11 +1,11 @@
 import pandas as pd
-    #CONDITIONAL >
-
-df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-df_slice = df[df["Age"] > 22]
-print("\n Index + Label:")
-print(df_slice,"\n---------------------") 
-
+try:
+    df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+    fil = df.loc[1:, ["Score", "Name", "Age"]] 
+    print("\n Index + Labelers:")
+    print(fil,"\n---------------------") 
+except KeyError as e:
+    print("No column", e)
 
 """
 #SLICING DATA
