@@ -67,16 +67,14 @@ print(df_slice,"\n---------------------")
 #Output: 2  Charlie   25     79
 
     #COLUMN SLICING - last index NOT included
-xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df_slice = df.iloc[:, 1:2] #1 represents the start of columns slicing, 
 #2 is the last but NOT included
 print("\n Column slice:")
 print(df_slice,"\n---------------------")
 
     #ROW + COLUMN SLICING - last index NOT included
-xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df_slice = df.iloc[0:3, 3:7 ] #2:3 sliced rows of alice,bob. #2:3 slices the colummn Name and stops at Score(Not included)
 print("\n BOTH slice:")
 print(df_slice,"\n---------------------")
@@ -86,16 +84,14 @@ print(df_slice,"\n---------------------")
 
     #ROW + COLUMN - Label + Label   NO LOC
 import pandas as pd
-xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df_slice = df[["Name","Pet","Job"] ]
 print("\n Label + Label:")
 print(df_slice,"\n---------------------") 
 
 
     #ROW + COLUMN - Index + Label
-xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 
 df_slice = df.loc[:, ["Pet", "Job", "Name"]]
 print("\n Index + Label:")
@@ -105,8 +101,7 @@ print(df_slice,"\n---------------------")
 """
     #Try except no Column Found:
 try:
-    xlsx_path = "File.xlsx" 
-    df = pd.read_excel(xlsx_path)
+    df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
     df_slice = df.loc[0:3, ["Name","Job","Pet","Ages"]]
     print("\n Index + Label:")
     print(df_slice,"\n---------------------") 
@@ -114,10 +109,12 @@ except KeyError as e:
     print("No Column were found")
     print("Details", e)
 
+    
+    
+
     # Filter
 import pandas as pd
-xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 fil = df.filter(like="Score")      
 print("\n Index + Labelers:")
 print(fil,"\n---------------------") 
@@ -129,7 +126,7 @@ print(fil,"\n---------------------")
     #CHANGE COLUMN NAME BUT NOT SAVED IN EXCEL only in DataFrame
 import pandas as pd
 xlsx_path = "File.xlsx" 
-df = pd.read_excel(xlsx_path) 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df.columns = ["ID", "Name", "Age", "Subject", "Grade", "Dave", "Dave "]
 df_slice = df[["Name","Dave","ID"] ]
 print("\n Label + Label:")
@@ -137,8 +134,23 @@ print(df_slice,"\n---------------------")
 
     #CHANGE COLUMN NAME BUT SAVED IN EXCEL
 import pandas as pd
-df = pd.read_excel("Try.xlsx")
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
 df.columns = ["ID", "Name", "Age", "Subject", "Grade", "Dave", "ETS"]
 df.to_excel("Try.xlsx", index=False) #index = False prevents the code from creating unnecessary index
 
 
+
+
+
+#OTHERS:
+    #For multiple sheets of excel file:
+        #df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+
+
+    #CONDITIONAL >
+import pandas as pd
+xlsx_path = "File.xlsx" 
+df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
+df_slice = df[df["Age"] > 22]
+print("\n Index + Label:")
+print(df_slice,"\n---------------------") 
