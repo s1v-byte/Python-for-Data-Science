@@ -150,4 +150,17 @@ except KeyError as e:
     print("No Column were found")
     print("Details", e)
 
+    #SAVING THE FILE
+import pandas as pd
+df = pd.read_excel("Book1.xlsx", sheet_name="Sheet1")
+slice_loc = df.loc[1:3, ["Name", "Score"]]
+slice_loc.to_excel("Book1.xlsx", sheet_name="Sheet2", index=False)
+
+    #SAVING TO SAME FILE, BUT APPENDING NEW SHEET
+import pandas as pd
+df = pd.read_excel("Book1.xlsx", sheet_name="Sheet1")
+slice_loc = df.loc[1:3, ["Name", "Score"]]
+# Write slice to another sheet in the SAME file
+with pd.ExcelWriter("Book1.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
+    slice_loc.to_excel(writer, sheet_name="Sheet2", index=False)   
 

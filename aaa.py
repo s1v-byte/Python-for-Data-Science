@@ -1,11 +1,7 @@
-import pandas as pd
-try:
-    df = pd.read_excel("File.xlsx", sheet_name="Sheet1")
-    fil = df.loc[1:, ["Score", "Name", "Age"]] 
-    print("\n Index + Labelers:")
-    print(fil,"\n---------------------") 
-except KeyError as e:
-    print("No column", e)
+
+
+
+
 
 """
 #SLICING DATA
