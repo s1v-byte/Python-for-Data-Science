@@ -96,11 +96,3 @@ with open("testing3.txt", "r") as readfile:
             writefile.write(line)
 
 
-            #LOADING DATA WITH PANDA
-
-#Reading csv files using panda
-
-import pandas 
-csv_path = "File.xlsx"
-df = pandas.read_excel(csv_path)
-

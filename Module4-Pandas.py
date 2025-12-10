@@ -1,4 +1,22 @@
 """
+            #LOADING DATA WITH PANDA
+
+#Reading csv files using panda
+
+import pandas 
+csv_path = "File.xlsx"
+df = pandas.read_excel(csv_path)
+
+#Finding Unique Characters:
+
+    #in Columns:
+import pandas as pd
+
+df = pd.read_excel("ABC.xlsx", sheet_name="Sheet1")
+df_slice = df["Name"].unique() 
+print("\n Column slice:")
+print(df_slice,"\n---------------------")
+
 #Reading csv files using panda
     #Basic Read CSV File
 import pandas 
@@ -163,4 +181,46 @@ slice_loc = df.loc[1:3, ["Name", "Score"]]
 # Write slice to another sheet in the SAME file
 with pd.ExcelWriter("Book1.xlsx", engine="openpyxl", mode="a", if_sheet_exists="replace") as writer:
     slice_loc.to_excel(writer, sheet_name="Sheet2", index=False)   
+
+    #EXPORTING
+import pandas as pd
+df = pd.read_excel("example_data.xlsx", sheet_name="Sheet1")
+
+slice_rows = df[:3]
+slice_columns = df[["Name", "Occupation"]]
+filtered = df[df["Age"] > 25]
+filtered_multi = df[(df["Age"] > 25) & (df["Score"] >= 85)]
+slice_loc = df.loc[1:3, ["Name", "Score"]]
+slice_iloc = df.iloc[0:4, 1:3]
+
+    #to_excel() export file will only remain and OVERWRITES the rest of the contents
+slice_rows.to_excel("output_first3.xlsx", index=False)
+filtered.to_excel("output_filtered.xlsx", index=False)
+slice_loc.to_excel("output_loc.xlsx",sheet_name="Name+Age", index=False) 
+
+    #EXPORTING WITHOUT AFFECTING EXISTING SHEETS   
+import pandas as pd
+def process_and_append(input_file, output_file=None):
+    # If no output file is given, overwrite the original (while keeping all sheets)
+    output_file = output_file or input_file
+    all_sheets = pd.read_excel(input_file, sheet_name=None)
+    df = all_sheets["Sheet1"]
+
+    slice_rows = df[:3]
+    filtered = df[df["Age"] > 25]
+    filtered_multi = df[(df["Age"] > 25) & (df["Score"] >= 85)]
+    slice_loc = df.loc[1:3, ["Name", "Score"]]
+
+    all_sheets["Slice_Rows_First3"] = slice_rows
+    all_sheets["Filtered_Age>25"] = filtered
+    all_sheets["Loc_Slice"] = slice_loc
+    all_sheets["FILTERED MULTI"] = filtered_multi
+    
+    with pd.ExcelWriter(output_file, engine="openpyxl") as writer:
+        for sheet_name, sheet_df in all_sheets.items():
+            sheet_df.to_excel(writer, sheet_name=sheet_name, index=False)
+
+    print(f"Excel saved successfully to: {output_file}")
+# If no file in the export. then it will overwrite the current file
+process_and_append("example_data.xlsx","example_data_output.xlsx") 
 
