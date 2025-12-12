@@ -34,6 +34,7 @@ np.arange(0, 10, 2)                # [0,2,4,6,8]
 np.linspace(0, 1, 5)               # 5 numbers 0→1
 
 
+            #1D ARRAY#
 #CHANGING VALUES
 
     #USING INDEX
@@ -41,11 +42,17 @@ a = np.array([10, 20, 30])
 a[1] = 99
 #result : [10, 99, 30]
 
+
     #USING SLICING
 a = np.array([10, 20, 30])
 a [0:2] = [7,8]
 #result : [7, 8, 30]
 
+#Boolean Indexing:
+
+a = np.array([3, 5, 2, 8, 20])
+b = a [ a > 5]
+#result: [8, 20]
 
 #Basic NumPy OPERATIONS:
 
@@ -62,15 +69,33 @@ sum = u + v
 
 
 #Universal Function (ufuncs)
-    #
+
+    #SQUARE ROOT
 a = np.array([1,4,9])
 c = np.sqrt(a)
 #result: [1. 2. 3.]
 
-    #
+    #SQUARED ^2
+w = np.array([0, 1, 2])
+pe = np.square(w)
+
+    #SIN COS
 np.sin(np.array([0, np.pi/2, np.pi]))
 #result: [0. 1. 0.]
 
-w = np.array([0, 1, 2])
-pe = np.square(w)
-print(pe)
+#DOT PRODUCTION
+
+u = np.array([1, 2]) 
+v = np.array([3, 4])
+np.dot(u, v) #1*3 + 2*4 = 11 #this is vector math
+#result: 11
+
+"""
+Not required, but very useful:
+.sum()
+.mean()
+.min()
+.max()
+.argmax() (index of max)
+.sort()
+"""
