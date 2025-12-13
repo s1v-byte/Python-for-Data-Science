@@ -14,6 +14,23 @@ FACTS:
 1. Array starts at 0 and the END index it NOT INCLUDED
 2. It does math on entire arrays at once, NO LOOPS NEEDED
 3. Numpy is faster than pandas
+4. Numpy is the basis of pandas
+5. Numpy is a library for scientific computing
+
+-----------------------------------------
+DIFFERENCE BETWEEN FUNCTIONS AND METHODS
+- A function is like a stand-alone tool.
+- A method is the same kind of tool, but it's attached to an object.
+
+# Function
+import numpy as np
+result = np.dot(np.array([1, -1]), np.array([1, 1]))  
+
+# Method
+import numpy as np
+vec1 = np.array([1, -1])
+vec2 = np.array([1, 1])
+result = vec1.dot(vec2)
 
 """
 
@@ -70,6 +87,11 @@ sum = u + v
 
 #Universal Function (ufuncs)
 
+    #LINESPACE
+a = np.linspace(-2,4,num=5)
+#process "-2" starting number | "2" is end | 5 is the total number
+#result: [-2. -1.  0.  1.  2.]
+
     #SQUARE ROOT
 a = np.array([1,4,9])
 c = np.sqrt(a)
@@ -87,15 +109,60 @@ np.sin(np.array([0, np.pi/2, np.pi]))
 
 u = np.array([1, 2]) 
 v = np.array([3, 4])
-np.dot(u, v) #1*3 + 2*4 = 11 #this is vector math
+r = np.dot(u, v) 
+#process: 1*3 + 2*4 = 11 #this is vector math
 #result: 11
 
+    #Same purpose from above, but for loop. np.dot is still faster and efficient
+u = ([1, 2]) 
+v = ([3, 4])
+z = []
+for n, m in zip(u,v):
+    z.append(n*m)
+#process: 1*3 + 2*4
+#result: [3,4]
+
+        # ,
+r = np.dot(np.array([1,-1]),np.array([1,1]))
+#process: [1x-1] = -1. | [1x1] = 1 | 1 - 1 = 0
+#result: 0
+
+    # random append
+y = [1,2]
+z = []
+for i in y:
+    z.append(2*i)
+#result: [2,4]
+
+
+#Adding constant value to a numpy Array aka, broadcasting
+u = np.array([1,2,3,-1])
+z = u+1 #1 is the constant value
+#result: [2 3 4 0]
+
+
+#DATA TYPE
+import numpy as np            
+invin = np.array([3, 3.4, 4.5, 3.3])
+cibler = type(invin)
+#result: <class 'numpy.ndarray'> 
+    #nd → N-dimensional (it can have 1D, 2D, 3D, or more dimensions)
+    #array → a collection of values stored together
 """
-Not required, but very useful:
+Not required, but very useful functions:
+
+.pi 
 .sum()
 .mean()
 .min()
 .max()
 .argmax() (index of max)
 .sort()
+.size #count all the index
+.ndim #represents the rank of the array, rank 1 is index 1
 """
+
+            #2D ARRAY
+
+
+
