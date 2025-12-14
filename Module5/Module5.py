@@ -196,6 +196,22 @@ arr1.dtype
 #===============================================
 
 #OTHERS:
+    #SHAPE
+        #1D Array:
+arr = np.array([10, 20, 10])
+arr.shape
+#output: (3,)
+        # 2D array
+arr2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+arr2.shape  
+# Output: (3, 3)
+        # 3D array
+arr3 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+arr3.shape  
+# Output: (2, 2, 2) 
+    #the third 2 is because of [3.4]],
+    #if u read it in 2D array, it only have 2
+
     #SUM
 arr = np.array([10, 20, 10])
 np.sum(arr)
@@ -234,7 +250,7 @@ arr1.size
     #NDIM (Counts the rank of the index)
 arr2 = np.array([[1, 2, 3], [4, 5, 6]])
 np.ndim(arr2)
-#result: (2,)
+#result: (2,) #2 is the number of []
 
     #PI
 arr = np.array([1, 2, 3, 4, 5]) * np.pi
