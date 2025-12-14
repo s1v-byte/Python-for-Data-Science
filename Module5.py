@@ -64,12 +64,20 @@ a[1] = 99
 a = np.array([10, 20, 30])
 a [0:2] = [7,8]
 #result : [7, 8, 30]
+#===============================================
+#-----------------------------------------------
+#===============================================
+
 
 #Boolean Indexing:
 
 a = np.array([3, 5, 2, 8, 20])
 b = a [ a > 5]
 #result: [8, 20]
+#===============================================
+#-----------------------------------------------
+#===============================================
+
 
 #Basic NumPy OPERATIONS:
 
@@ -83,6 +91,9 @@ u = np.array([1, 2])
 v = np.array([3, 4])
 sum = u + v
 #result : [4 6]
+#===============================================
+#-----------------------------------------------
+#===============================================
 
 
 #Universal Function (ufuncs)
@@ -104,6 +115,9 @@ pe = np.square(w)
     #SIN COS
 np.sin(np.array([0, np.pi/2, np.pi]))
 #result: [0. 1. 0.]
+#===============================================
+#-----------------------------------------------
+#===============================================
 
 #DOT PRODUCTION
 
@@ -133,34 +147,104 @@ z = []
 for i in y:
     z.append(2*i)
 #result: [2,4]
+#===============================================
+#-----------------------------------------------
+#===============================================
+
+#Boolean Filtering 
+import numpy as np
+arr = np.array([10, 25, 35, 45, 60, 75, 90])
+filtered_arr = arr[arr < 50]
+# Output: [10 25 35 45]
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+mask = arr > 30
+# Output: [False False False  True  True  True]
+filtered_arr = arr[mask]
+# Output: [40 50 60]
+#===============================================
+#-----------------------------------------------
+#===============================================
 
 
 #Adding constant value to a numpy Array aka, broadcasting
 u = np.array([1,2,3,-1])
 z = u+1 #1 is the constant value
 #result: [2 3 4 0]
+#===============================================
+#-----------------------------------------------
+#===============================================
 
 
-#DATA TYPE
-import numpy as np            
+    #DATA TYPE          
 invin = np.array([3, 3.4, 4.5, 3.3])
 cibler = type(invin)
 #result: <class 'numpy.ndarray'> 
     #nd → N-dimensional (it can have 1D, 2D, 3D, or more dimensions)
     #array → a collection of values stored together
-"""
-Not required, but very useful functions:
 
-.pi 
-.sum()
-.mean()
-.min()
-.max()
-.argmax() (index of max)
-.sort()
-.size #count all the index
-.ndim #represents the rank of the array, rank 1 is index 1
-"""
+    #dtype
+arr1 = np.array([1, 2, 3, 4, 5])
+arr1.dtype
+#result: int64
+
+arr1 = np.array([1.3, 2.4, 3.5, 4.3, 5,1])
+arr1.dtype
+#result: float64
+#===============================================
+#-----------------------------------------------
+#===============================================
+
+#OTHERS:
+    #SUM
+arr = np.array([10, 20, 10])
+np.sum(arr)
+#output: 40
+
+    #MEAN
+arr = np.array([10, 20, 30, 40, 50, 60])
+np.mean(arr)
+#output: 35.0
+
+    #MINIMUM
+arr = np.array([10, 20, 30])
+np.min(arr)
+#output: 10
+
+    #MAXIMUM
+arr = np.array([10, 20, 30])
+np.min(arr)
+#output: 30
+
+    #ARGMAX
+arr = np.array([10, 20, 30])
+np.min(arr) #finds the index of the max value data
+#output: 2
+
+    #SORT
+arr = np.array([20, 10, 30])
+np.min(arr) #finds the index of the max value data
+#output: [20, 10, 30]
+
+    #SIZE (Counts all the index)
+arr1 = np.array([1, 2, 3, 4, 5])
+arr1.size
+#result: 5
+
+    #NDIM (Counts the rank of the index)
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+np.ndim(arr2)
+#result: (2,)
+
+    #PI
+arr = np.array([1, 2, 3, 4, 5]) * np.pi
+    # or:
+pie = [arr * np.pi]
+# Output: [ 3.14159265  6.28318531  9.42477796 12.56637061 15.70796327]
+
+#===============================================
+#-----------------------------------------------
+#===============================================
 
             #2D ARRAY
 
