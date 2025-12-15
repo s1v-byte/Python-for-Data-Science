@@ -1,5 +1,17 @@
 import numpy as np
 
-A = np.array([10, 20, 30,40, 50, 60,70, 80, 90])
-b = A.reshape(3,3)
-print(b)
+"""A = np.array([
+  [1, 2, 3],
+  [4, 5, 6]
+]) 
+
+
+b = A *2
+"""
+A = np.array([
+  [1, 2, 3],
+  [4, 5, 6]
+])
+
+C = A @ 2
+print(C)

@@ -93,6 +93,17 @@ B.shape = (4, 2)
 #ndim counts all the rows and columns
 #shape
 """
+    # @ 
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+C = A @ 2
+#Process:
+#First Row, First Column | (1×5)+(2×7)=5+14=19
+#First Row, Second Column | (1×6)+(2×8)=6+16=22
+#Second Row, First Column | =(3×5)+(4×7)=15+28=43
+#Second Row, Second Column | (3×6)+(4×8)=18+32=50
+
+#Output: [19, 22], [43,50]
 
 
 #Boolean indexing
