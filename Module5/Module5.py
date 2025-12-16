@@ -141,6 +141,26 @@ r = np.dot(np.array([1,-1]),np.array([1,1]))
 #process: [1x-1] = -1. | [1x1] = 1 | 1 - 1 = 0
 #result: 0
 
+
+        #
+A = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])          
+B = np.array([
+    [1, 4],
+    [2, 5],
+    [3, 6]
+])
+"""
+Process:
+A Row 1 * B Column 1 (1x1, 2x2, 3x3) = 1+4+9 = 14
+A Row 1 * B Column 2 (1x4, 2x5, 3x6) = 4+10+18 = 32
+A Row 2 * B Column 1 (4x1, 5x2, 6x3) = 4+10+18 = 32
+A Row 2 * B Column 2 (4x4, 5x5, 6x6) = 16+25+36 = 77
+"""
+
+#Output: [[14, 32] [32,77]]
     # random append
 y = [1,2]
 z = []

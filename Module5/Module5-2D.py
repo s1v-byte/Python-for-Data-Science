@@ -46,9 +46,8 @@ B = np.array([
     [30, 31, 32]])
 print(B[0:2, :])
 # 0:2(Select rows 0-1) : (and print all columns)
-A[0:2, 1:3]
 
-print("Last column",B[1:3, 2])
+print("Last column",B[1:3, 2]) # row 1-2 and column 2
 print("NEG",B[-1,-1]) #Last row, Last column
 
 
@@ -89,6 +88,9 @@ A.shape = (3, 4)
 B.shape = (4, 2)
 #output: (3,2)
 
+- The @ operator is matrix multiplication
+- Matrix multiplication requires another array (matrix or vector), not a scalar (A @ 2) 
+
 #size counts all the index
 #ndim counts all the rows and columns
 #shape
@@ -96,7 +98,7 @@ B.shape = (4, 2)
     # @ 
 A = np.array([[1, 2], [3, 4]])
 B = np.array([[5, 6], [7, 8]])
-C = A @ 2
+C = A @ B
 #Process:
 #First Row, First Column | (1×5)+(2×7)=5+14=19
 #First Row, Second Column | (1×6)+(2×8)=6+16=22
@@ -105,6 +107,11 @@ C = A @ 2
 
 #Output: [19, 22], [43,50]
 
+    #Scalar
+A = np.array([[2,4], [6,3]])
+
+B = A * 2
+print(B)
 
 #Boolean indexing
 A = np.array([
@@ -150,3 +157,4 @@ A = np.array([10, 20, 30,40, 50, 60,70, 80, 90])
 b = A.reshape(3,3)
 #output: [[10 20 30][40 50 60][70 80 90]]
 
+#NDIM
