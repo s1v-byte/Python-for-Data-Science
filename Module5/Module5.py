@@ -69,7 +69,7 @@ a [0:2] = [7,8]
 #===============================================
 
 
-#Boolean Indexing:
+#Conditional Indexing:
 
 a = np.array([3, 5, 2, 8, 20])
 b = a [ a > 5]
@@ -99,7 +99,7 @@ sum = u + v
 #Universal Function (ufuncs)
 
     #LINESPACE
-a = np.linspace(-2,4,num=5)
+a = np.linspace(-2,2,num=5)
 #process "-2" starting number | "2" is end | 5 is the total number
 #result: [-2. -1.  0.  1.  2.]
 
@@ -229,9 +229,13 @@ arr2.shape
 arr3 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 arr3.shape  
 # Output: (2, 2, 2) 
-    #the third 2 is because of [3.4]],
-    #if u read it in 2D array, it only have 2
+    #2 rows, 2 columns 2 GROUPS ","
 
+arr3 = np.array([[[1, 2], [3, 4]]   ,[[2,4],[2,1]],    [[5, 6], [7, 8]]])
+arr3.shape
+# Output: (3, 2, 2)
+    #3 Groups, 2 rows, 2 functions
+    
     #SUM
 arr = np.array([10, 20, 10])
 np.sum(arr)

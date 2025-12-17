@@ -96,8 +96,14 @@ B.shape = (4, 2)
 #shape
 """
     # @ 
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+A = np.array([
+    [1, 2], 
+    [3, 4]])
+B = np.array([
+    [5, 6], 
+    [7, 8]
+    ])
+
 C = A @ B
 #Process:
 #First Row, First Column | (1×5)+(2×7)=5+14=19
@@ -154,7 +160,7 @@ preparing ML features
 fixing CSV imports
 """
 A = np.array([10, 20, 30,40, 50, 60,70, 80, 90])
-b = A.reshape(3,3)
+b = A.reshape(3,3,3)
 #output: [[10 20 30][40 50 60][70 80 90]]
 
 #NDIM
