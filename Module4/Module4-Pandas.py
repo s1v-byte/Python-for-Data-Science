@@ -1,4 +1,3 @@
-"""
             #LOADING DATA WITH PANDA
 
 #Reading csv files using panda
@@ -64,7 +63,7 @@ print("With Excel File:\n",df)
 
         #SLICING ----> df.iloc
 #Excel Data Reference:    
-"""
+
 #SLICING DATA
       Name  Age  Score  Gender     Job    Hair   Pet
 0    Alice   23     88  Female  Doctor  Blonde   Dog
