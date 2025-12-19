@@ -1,6 +1,3 @@
-Perfect — so you want the same capability-style goals, but Python only, no SQL / BI / Excel.
-Below is a clean, professional Python-only capability list tailored for an entry-level data analyst aiming for Manila roles, written exactly like:
-Writing API-to-DataFrame pipelines in Python
 You can treat this as:
 •	your learning roadmap
 •	your personal project goals
@@ -62,15 +59,4 @@ Python-Only “Best Candidate” Bonus Skills
 •	Applying basic statistical tests (mean comparison, correlation)
 •	Implementing simple forecasting or trend projection models
 •	Exporting processed data for downstream tools
-________________________________________
-One-Sentence “Best Candidate” Python Pitch
-You should eventually be able to say:
-“I can build Python pipelines that pull data from APIs, clean and transform it into analysis-ready DataFrames, perform exploratory analysis, and automate repeatable reporting workflows.”
-That sentence alone is strong for entry-level Manila analyst roles.
-________________________________________
-If you want, I can next:
-•	Turn this into Python-only project ideas
-•	Create a skill progression checklist
-•	Help you write resume bullets using only Python
-Just tell me what you want next 👍
 
