@@ -179,9 +179,14 @@ response.raise_for_status()  # fails fast if network error
 data = response.json()
 df = pd.json_normalize(data)
 
-cherry = df[df["name"] == "Banana"]
-#print("Family:", cherry.iloc[0]["family"])
-#print("Genus:", cherry.iloc[0]["genus"])
+cherry = df[df["name"] == "Cherry"]
+print("Family:", cherry.iloc[0]["family"])
+print("Genus:", cherry.iloc[0]["genus"])
+
+#Other way to Call out Columns in API:
+banana = df[df["name"] == "Banana"]
+calories = banana.iloc[0]["nutritions.calories"]
+print(f"Banana Calories: {calories}")
 
 #Output: Family: Musaceae | Genus: Musa
 
