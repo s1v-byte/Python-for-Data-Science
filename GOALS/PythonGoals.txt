@@ -1,0 +1,76 @@
+Perfect — so you want the same capability-style goals, but Python only, no SQL / BI / Excel.
+Below is a clean, professional Python-only capability list tailored for an entry-level data analyst aiming for Manila roles, written exactly like:
+Writing API-to-DataFrame pipelines in Python
+You can treat this as:
+•	your learning roadmap
+•	your personal project goals
+•	future resume bullet phrasing
+________________________________________
+Python Data Acquisition & Ingestion
+•	Writing API-to-DataFrame pipelines in Python
+•	Consuming REST APIs using requests
+•	Handling authentication, pagination, and rate limits
+•	Parsing nested JSON responses into tabular structures
+•	Ingesting data from CSV, Excel, and web-based sources
+•	Validating schemas and enforcing data type consistency
+________________________________________
+Python Data Cleaning & Preparation
+•	Cleaning datasets using pandas (nulls, duplicates, outliers)
+•	Standardizing dates, currencies, and categorical values
+•	Converting raw data into analysis-ready DataFrames
+•	Applying vectorized operations for performance
+•	Creating reusable data cleaning functions
+________________________________________
+Data Transformation & Feature Engineering (Python)
+•	Performing grouped aggregations and joins in pandas
+•	Creating derived metrics and KPIs
+•	Building fact and dimension-style DataFrames
+•	Implementing time-based features (MoM, YoY, rolling averages)
+•	Reshaping data using melt, pivot, and explode
+________________________________________
+Exploratory Data Analysis (EDA)
+•	Conducting statistical summaries and distribution analysis
+•	Identifying trends, patterns, and anomalies
+•	Performing segmentation and cohort-style analysis
+•	Comparing groups using descriptive statistics
+•	Documenting analytical assumptions and findings
+________________________________________
+Data Visualization in Python
+•	Creating business-ready charts using matplotlib and seaborn
+•	Designing clear, labeled, and interpretable visuals
+•	Visualizing time series, category comparisons, and distributions
+•	Highlighting insights with annotations and color logic
+•	Exporting visuals for reports and presentations
+________________________________________
+Automation & Workflow Development
+•	Writing end-to-end analysis scripts in Python
+•	Automating recurring data refresh and reporting workflows
+•	Implementing basic logging and error handling
+•	Structuring projects into modular, reusable files
+•	Running scripts via command line or schedulers
+________________________________________
+Code Quality & Professional Practices
+•	Writing readable, well-documented Python code
+•	Using virtual environments and dependency management
+•	Version-controlling projects with Git
+•	Creating clear README documentation
+•	Following PEP 8 style guidelines
+________________________________________
+Python-Only “Best Candidate” Bonus Skills
+•	Working efficiently with large datasets (100k–1M rows)
+•	Using NumPy for performance-critical operations
+•	Applying basic statistical tests (mean comparison, correlation)
+•	Implementing simple forecasting or trend projection models
+•	Exporting processed data for downstream tools
+________________________________________
+One-Sentence “Best Candidate” Python Pitch
+You should eventually be able to say:
+“I can build Python pipelines that pull data from APIs, clean and transform it into analysis-ready DataFrames, perform exploratory analysis, and automate repeatable reporting workflows.”
+That sentence alone is strong for entry-level Manila analyst roles.
+________________________________________
+If you want, I can next:
+•	Turn this into Python-only project ideas
+•	Create a skill progression checklist
+•	Help you write resume bullets using only Python
+Just tell me what you want next 👍
+

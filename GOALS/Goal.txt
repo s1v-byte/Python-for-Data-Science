@@ -1,0 +1,71 @@
+Personal Projects:
+❌ Avoid These
+-Generic Kaggle Titanic analysis
+-Copy-paste YouTube dashboards
+-Projects with no business context
+
+    #Recommended Personal Project Portfolio (3-5 Projects)
+Project 1: Business Performance Dashboard (MUST-HAVE)
+Tools: Excel → SQL → Power BI
+
+Example:
+“Sales & Customer Performance Analysis for a Retail Company”
+Include:
+-Revenue, growth, top products
+-Customer segmentation
+-Insights & recommendations
+Why recruiters love this:
+It mirrors actual corporate reporting.
+
+    Project 2: SQL-Heavy Project (Very Important)
+
+Example:
+“Analyzing Customer Retention for a Subscription Service”
+Requirements:
+-5+ tables
+-Multiple JOINs
+-Window functions
+-Clean, readable SQL
+Deliverable:
+SQL scripts
+Summary of insights (PDF or README)
+
+    Project 3: Data Cleaning & Transformation Project
+
+Example:
+“Cleaning and Standardizing 100,000+ Transaction Records”
+Show:
+-Handling missing values
+-Duplicate detection
+-Date & currency standardization
+-Before vs after comparison
+Tools: Excel + Power Query or Python (pandas)
+
+    Project 4 (Optional): Predictive or Trend Analysis
+Simple, not advanced ML.
+Example:
+-Sales forecasting
+-Demand trends
+-Churn risk scoring
+
+    Soft Skills That Matter A LOT in PH Corporate Culture
+Technical skills get interviews.
+Communication gets offers.
+You must be able to:
+-Explain insights in simple English
+-Translate numbers into business impact
+-Present dashboards confidently
+    Write clean summaries (1-2 pages max)
+Practice explaining:
+-“What happened?”
+-“Why did it happen?”
+-“What should the business do?”
+
+
+    Resume & Portfolio Strategy (Manila-Specific)
+Resume
+-1 page only
+-Skills at the top
+Projects with results, not tools only
+❌ “Created Power BI dashboard”
+✅ “Built Power BI dashboard that identified 12% revenue decline and suggested pricing adjustments”

@@ -63,7 +63,8 @@ data = {
 df = pd.DataFrame(data)
 #The data in dict_ is pass onto Pandas API
 # Display the first 3 rows
-print(df.mean())
+print(df.head(3))
+#Default output for .head() is 5 columns/rows
 """
 Output:
       Name  Age
