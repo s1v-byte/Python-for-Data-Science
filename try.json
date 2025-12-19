@@ -1,0 +1,49 @@
+{
+  "company": "TechNova",
+  "location": {
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  "employees": [
+    {
+      "id": 101,
+      "name": "Alice Johnson",
+      "department": {
+        "name": "Engineering",
+        "floor": 5
+      },
+      "skills": ["Python", "SQL", "Docker"],
+      "salary": {
+        "base": 120000,
+        "bonus": 15000
+      }
+    },
+    {
+      "id": 102,
+      "name": "Bob Smith",
+      "department": {
+        "name": "Data Science",
+        "floor": 6
+      },
+      "skills": ["Python", "Pandas", "Machine Learning"],
+      "salary": {
+        "base": 130000,
+        "bonus": 20000
+      }
+    },
+    {
+      "id": 103,
+      "name": "Carol Lee",
+      "department": {
+        "name": "HR",
+        "floor": 3
+      },
+      "skills": ["Recruiting", "Communication"],
+      "salary": {
+        "base": 90000,
+        "bonus": 10000
+      }
+    }
+  ]
+}
